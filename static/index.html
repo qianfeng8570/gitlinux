@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>weixin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0"/>
 	<script type="text/javascript" src='jquery-1.11.3.js'></script>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
@@ -18,6 +19,7 @@
 	
 		});
 	</script> -->
+	<h1>微信自定义分享测试</h1>
 	<script type="text/html">
 		function jsonpcallback(res){
 			//alert(JSON.stringify(res));
@@ -33,6 +35,9 @@
 			console.log(data);
 		},"json");
 	</script> -->
+	<button id="getNetworkType">获取网络状态</button>
+	<br/>
+	<button id="getLocation">获取当前地址</button>
 	<script type="text/javascript" src="test.js"></script>
 </body>
 </html>
