@@ -18,9 +18,10 @@
 	
 		});
 	</script> -->
-	<script type="text/javascript">
+	<script type="text/html">
 		function jsonpcallback(res){
-			alert(JSON.stringify(res));
+			//alert(JSON.stringify(res));
+			console.log(res);
 		}
 		var script = document.createElement("script");
 		script.src = "/wechat/jssdk?callback=jsonpcallback";
