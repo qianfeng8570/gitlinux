@@ -1,7 +1,11 @@
 var express = require("express");
 var bodyparser = require("body-parser");
 var app = new express();
-app.use(bodyparser.json());
+
+app.use(bodyparser.urlencoded({
+	extended: true
+}));
+
 var path = require("path");
 require("./token.js")(app);
 require("./jssdk.js")(app);
