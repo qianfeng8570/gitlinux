@@ -3,8 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script type="text/javascript" src='jquery-1.11.3.js'></script>
 </head>
 <body>
-	hello weixin
+	<!-- hello weixin -->
+	<!-- <script type="text/javascript">
+		jsonpcallback({
+			"success" : true,
+			"data":[
+				{"a" : 1},
+				{"b" : 2}
+			]
+	
+		});
+	</script> -->
+	<script type="text/javascript">
+		function jsonpcallback(res){
+			alert(JSON.stringify(res));
+		}
+		var script = document.createElement("script");
+		script.src = "/wechat/jssdk?callback=jsonpcallback";
+
+		document.querySelector("body").appendChild(script);
+	</script>
+	<script type="text/javascript">
+		$.post("/wechat/jssdk",{},function(data){
+			console.log(data);
+		},"json");
+	</script>
 </body>
 </html>
